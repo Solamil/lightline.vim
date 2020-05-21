@@ -81,11 +81,11 @@ endfunction
 
 let s:_lightline = {
       \   'active': {
-      \     'left': [['mode', 'paste'], ['readonly', 'filename', 'modified']],
+      \     'left': [['mode', 'paste'], ['readonly', 'absolutepath', 'modified']],
       \     'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype']]
       \   },
       \   'inactive': {
-      \     'left': [['filename']],
+      \     'left': [['absolutepath']],
       \     'right': [['lineinfo'], ['percent']]
       \   },
       \   'tabline': {

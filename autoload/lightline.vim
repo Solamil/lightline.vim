@@ -81,8 +81,8 @@ endfunction
 
 let s:_lightline = {
       \   'active': {
-      \     'left': [['mode', 'paste'], ['readonly', 'absolutepath', 'modified']],
-      \     'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype']]
+      \     'left': [ ['readonly', 'absolutepath', 'modified']],
+      \     'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype'],['mode', 'paste']]
       \   },
       \   'inactive': {
       \     'left': [['absolutepath']],

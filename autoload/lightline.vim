@@ -81,8 +81,9 @@ endfunction
 
 let s:_lightline = {
       \   'active': {
-      \     'left': [ ['readonly', 'absolutepath', 'modified']],
-      \     'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype'],['mode', 'paste']]
+      \     'left': [ ['absolutepath', 'modified','readonly']],
+      \     'right': [['lineinfo'], ['percent'], ['neo_fileformat', 
+      \						 'filetype'],['mode', 'paste']]
       \   },
       \   'inactive': {
       \     'left': [['absolutepath']],
@@ -98,9 +99,10 @@ let s:_lightline = {
       \   },
       \   'component': {
       \     'mode': '%{lightline#mode()}',
-      \     'absolutepath': '%F', 'relativepath': '%f', 'filename': '%t', 'modified': '%M', 'bufnum': '%n',
-      \     'paste': '%{&paste?"PASTE":""}', 'readonly': '%R', 'charvalue': '%b', 'charvaluehex': '%B',
+      \     'absolutepath': '%F', 'relativepath': '%f', 'filename': '%t', 'modified': '[%M]', 'bufnum': '%n',
+      \     'paste': '%{&paste?"PASTE":""}', 'readonly': '[%R]', 'charvalue': '%b', 'charvaluehex': '0x%B',
       \     'spell': '%{&spell?&spelllang:""}', 'fileencoding': '%{&fenc!=#""?&fenc:&enc}', 'fileformat': '%{&ff}',
+      \     'neo_fileformat':'%{&fenc!=#""?&fenc:&enc}[%{&ff}]',
       \     'filetype': '%{&ft!=#""?&ft:"no ft"}', 'percent': '%3p%%', 'percentwin': '%P',
       \     'lineinfo': '%3l:%-2v', 'line': '%l', 'column': '%c', 'close': '%999X X ', 'winnr': '%{winnr()}'
       \   },

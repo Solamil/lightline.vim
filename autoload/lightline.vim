@@ -82,7 +82,7 @@ endfunction
 let s:_lightline = {
       \   'active': {
       \     'left': [ ['absolutepath', 'modified','readonly']],
-      \     'right': [['lineinfo'], ['percent'], ['neo_fileformat', 
+      \     'right': [['lineinfo'], ['max_line'], ['neo_fileformat', 
       \						 'filetype'],['mode', 'paste']]
       \   },
       \   'inactive': {
@@ -104,7 +104,8 @@ let s:_lightline = {
       \     'spell': '%{&spell?&spelllang:""}', 'fileencoding': '%{&fenc!=#""?&fenc:&enc}', 'fileformat': '%{&ff}',
       \     'neo_fileformat':'%{&fenc!=#""?&fenc:&enc}[%{&ff}]',
       \     'filetype': '%{&ft!=#""?&ft:"no ft"}', 'percent': '%3p%%', 'percentwin': '%P',
-      \     'lineinfo': '%3l:%-2v', 'line': '%l', 'column': '%c', 'close': '%999X X ', 'winnr': '%{winnr()}'
+      \     'lineinfo': '%3l:%-2v', 'line': '%l', 'column': '%c', 'close': '%999X X ', 'winnr': '%{winnr()}',
+      \	    'max_line': "%L"
       \   },
       \   'component_visible_condition': {
       \     'modified': '&modified||!&modifiable', 'readonly': '&readonly', 'paste': '&paste', 'spell': '&spell'
